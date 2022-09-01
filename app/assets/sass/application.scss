@@ -6,14 +6,18 @@ $govuk-new-link-styles: true;
 $govuk-assets-path: '/govuk/assets/';
 
 // Import GOV.UK Frontend and any extension styles if extensions have been configured
-@import "lib/extensions/extensions";
+@import ".tmp/sass/extensions";
 
 // Patterns that aren't in Frontend
+@import "patterns/contents-list";
+@import "patterns/mainstream-guide";
+@import "patterns/pagination";
+@import "patterns/related-items";
 @import "patterns/step-by-step-header";
 @import "patterns/step-by-step-nav";
 @import "patterns/step-by-step-related";
 @import "patterns/task-list";
-@import "patterns/related-items";
+@import "patterns/_search";
 
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
 
@@ -70,11 +74,6 @@ $govuk-assets-path: '/govuk/assets/';
     border-color: rgba(0,0,0,1.00);
   }
 
-  form,select{
-    font-family: sans-serif;
-    font-size: 1.1875rem;
-    margin:1em 0;
-  }
 
 a.app-link-destructive {
     color: $govuk-error-colour !important;
@@ -95,3 +94,38 @@ a.app-link-destructive {
       padding: govuk-spacing(2) 0;
       display: inline-block;
   }
+
+
+.defra-flood-status-red {
+    font-family: "GDS Transport",arial,sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 700;
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.25;
+    color: #0b0c0c;
+    background-color:#F6D7D2;
+    padding: 15px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    clear: both;
+    border-left: 10px solid #d4351c;
+}
+
+.defra-flood-status-amber {
+    font-family: "GDS Transport",arial,sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 700;
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.25;
+    color: #0b0c0c;
+    background-color:#F8E8CF;
+    padding: 15px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    clear: both;
+    border-left: 10px solid #E38C33;
+}

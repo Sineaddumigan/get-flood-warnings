@@ -10,7 +10,8 @@ router.use('/v2', require('./routes_v2')),
 router.use('/v4', require('./routes_v4')),
 router.use('/v5', require('./routes_v5')),
 router.use('/v6', require('./routes_v6')),
-router.use('/v7', require('./routes_v7'))
+router.use('/v7', require('./routes_v7')),
+router.use('/v01', require('./routes_v01'))
 
 
 
@@ -38,5 +39,8 @@ router.use('/place', placeRouter)
 
 let locationRouter3 = require('./routes_v4/location')
 router.use('/location', locationRouter)
+
+
+
 
 module.exports = router

@@ -13,7 +13,7 @@ const osSecret = process.env.OS_SECRET
 const normaliseAddressData = (results) => {
 	/*
         Addresses from OS Places API are messy and don't standardise the '1st line' of the street address.
-        To show this in a list we want to create a new property 'displayName' to describe the street adddress by adding some component parts of the address together.    
+        To show this in a list we want to create a new property 'displayName' to describe the street adddress by adding some component parts of the address together.
     */
 
 	let outputArray = []
@@ -91,7 +91,7 @@ const normaliseAddressData = (results) => {
 const normalisePlaceData = (results) => {
 	/*
         Addresses from OS Places API are messy and don't standardise the '1st line' of the street address.
-        To show this in a list we want to create a new property 'displayName' to describe the street adddress by adding some component parts of the address together.    
+        To show this in a list we want to create a new property 'displayName' to describe the street adddress by adding some component parts of the address together.
     */
 
 	let outputArray = []
@@ -206,6 +206,7 @@ router.post('/search', (req, res) => {
 			return
 		})
 		.then((response) => {
+			console.log(response)
 			// Get data from network response
 			var data = response.data
 			// Check there are address results in the data
