@@ -8,7 +8,6 @@
 {% block header %}
 {% endblock %}
 
-
 {% block beforeContent %}
 {% endblock %}
 
@@ -20,14 +19,12 @@
 <h1 class="govuk-heading-l">Select the area</h1>
 
 <div class="govuk-inset-text">
-  for BRID_01
+  for 3, Roundhay road, Bridlington
 </div>
 
 
 <p>Use the tab or arrow keys to move around the map. Click or use the spacebar to select or unselect a square.</p>
-<div id="map"></div><!-- // #map -->
-
-<div class="govuk-!-padding-bottom-2"></div>
+<div id="map2"></div><!-- // #map2 -->
 
   <label for="size">Grid size:</label>
 
@@ -40,13 +37,8 @@
     <option value="200">200px</option>
   </select>
 
-<div class="govuk-!-padding-bottom-5"></div>
-
-  <p>
-    Alternatively, if you know a nearby address,
-    <a href="../address/postcode"> link this location to a nearby address</a>
-  </p>
-
+  <p>If you know the coordinates of your area, you can <a href="#"  target="_blank">use coordinates instead</a>.</p>
+</br>
 <div class="govuk-button-group">
   {{ govukButton({
     text: "Continue"
@@ -55,7 +47,7 @@
   {{ govukButton({
     text: "Back to location search",
     classes: "govuk-button--secondary",
-    href: "/v01/location/search"
+    href: "/v01/multiple-upload/manual-find"
   }) }}
 </div>
 

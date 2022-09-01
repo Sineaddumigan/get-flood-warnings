@@ -18,11 +18,31 @@
 
 {% block content %}
 
+
+
 <div class="govuk-grid-row">
 
         <div class="govuk-grid-column-two-thirds">
 
-          <form class="form" action="/v01/multiple-upload/spreadsheet-gridref/match-fields-error" method="post">
+          <div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" data-module="govuk-error-summary">
+            <h2 class="govuk-error-summary__title" id="error-summary-title">
+              There is a problem
+            </h2>
+            <div class="govuk-error-summary__body">
+              <ul class="govuk-list govuk-error-summary__list">
+                <li>
+                  <a href="#xcoord">You must select a field with 6 figure numbers for X coordinate</a>
+                </li>
+                <li>
+                  <a href="#ycoord">You must select a field with 6 figure numbers for Y coordinate</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+
+
+          <form class="form" action="/v01/multiple-upload/spreadsheet-gridref/uploaded-locations" method="post">
 
                 <h1 class="govuk-heading-l">Match your fields</h1>
 
@@ -43,11 +63,15 @@
                 </select>
               </div>
 
-              <div class="govuk-form-group">
+              <div class="govuk-form-group govuk-form-group--error">
                 <label class="govuk-label" for="sort">
                   X coordinate
                 </label>
+                <p id="xcoord" class="govuk-error-message">
+                  <span class="govuk-visually-hidden">Error:</span> You must select a field with 6 figure numbers for X coordinate
+                </p>
                 <select class="govuk-select" id="sort" name="sort">
+                  <div class="govuk-date-input" id="passport-issued">
                   <option value="name" selected>Asset name</option>
                   <option value="criticality">x</option>
                   <option value="address">y</option>
@@ -60,10 +84,22 @@
                 </select>
               </div>
 
-              <div class="govuk-form-group">
-                <label class="govuk-label" for="sort">
-                  Y coordinate
-                </label>
+
+
+
+
+
+
+
+
+                <div class="govuk-form-group govuk-form-group--error">
+                  <label class="govuk-label" for="sort">
+                    Y coordinate
+                  </label>
+                  <p id="ycoord" class="govuk-error-message">
+                    <span class="govuk-visually-hidden">Error:</span> You must select a field with 6 figure numbers for Y coordinate
+                  </p>
+
                 <select class="govuk-select" id="sort" name="sort">
                   <option value="name" selected>Asset name</option>
                   <option value="criticality">x</option>
