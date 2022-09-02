@@ -1,18 +1,24 @@
 
-{% extends "layout_unbranded.html" %}
+{% extends 'layout.html' %}
 
 {% block pageTitle %}
-  Grid test
-{% endblock %}
-
-{% block header %}
+    Grid test
 {% endblock %}
 
 
 {% block beforeContent %}
+
+    {{ super() }}
+
+    {{ govukBackLink ({
+        text: 'Back',
+        href: 'javascript:history.back()'
+    }) }}
+
 {% endblock %}
 
 {% block content %}
+
 
 <form method="post" action="/v01/multiple-upload/manual-find-found">
 
