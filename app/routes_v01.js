@@ -403,6 +403,15 @@ router.post('/location/catigories-check', function (req, res) {
 
   })
 
+  // Route to check if address or area has been selected
+  router.post('/v01/multiple-upload/shapefile/are-you-sure', function (req, res) {
+
+    if (req.body['submit']=="true") {
+      res.redirect("/v01/multiple-upload/shapefile/uploading")
+    } else {
+      res.redirect("/v01/multiple-upload/shapefile/replace")
+    }
+  })
 
 
 
