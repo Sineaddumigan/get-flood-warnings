@@ -286,7 +286,7 @@ router.post('/location/catigories-check', function (req, res) {
     // Check whether the variable matches a condition
     if (locationFormat == "manual"){
       // Send user to next page
-      res.redirect('/v01/multiple-upload/spreadsheet-postcode/instructions-postcode')
+      res.redirect('/v01/address-manual/address-area')
     }
 
      else {
@@ -298,39 +298,39 @@ router.post('/location/catigories-check', function (req, res) {
 
 
 
-  // Run this code when a form is submitted to 'juggling-balls-answer'
+  // Run this code when a form is submitted from 'Do you need to add more locations'
   router.post('/location-add-answer', function (req, res) {
 
-    // Make a variable and give it the value from 'how-many-balls'
+    // Make a variable and give it the value from 'more-locations'
     var Morelocation = req.session.data['more-locations']
 
     // Check whether the variable matches a condition
     if (Morelocation == "yes"){
-      // Send user to next page
-      res.redirect('/v01/multiple-upload/spreadsheet-postcode/upload-spreadsheet2')
+      // Send user to the page where they can add more locations
+      res.redirect('/v01/multiple-upload/location-format')
     }
 
      else {
-      // Send user to ineligible page
+      // Send user to the next page
       res.redirect('/v01/multiple-upload/flood-warning')
     }
 
   })
 
-  // Run this code when a form is submitted to 'juggling-balls-answer'
+  // Run this code when a form is submitted from 'Do you need to add more locations'
   router.post('/location-add-answer1', function (req, res) {
 
-    // Make a variable and give it the value from 'how-many-balls'
+    // Make a variable and give it the value from 'more-locations1'
     var Morelocation1 = req.session.data['more-locations1']
 
-    // Check whether the variable matches a condition
+    // Send user to the page where they can add more locations
     if (Morelocation1 == "yes"){
       // Send user to next page
-      res.redirect('/v01/multiple-upload/spreadsheet-postcode/upload-spreadsheet2')
+      res.redirect('/v01/multiple-upload/location-format')
     }
 
      else {
-      // Send user to ineligible page
+      // Send user to next page
       res.redirect('/v01/multiple-upload/flood-warning')
     }
 
@@ -410,6 +410,18 @@ router.post('/location/catigories-check', function (req, res) {
       res.redirect("/v01/multiple-upload/shapefile/uploading")
     } else {
       res.redirect("/v01/multiple-upload/shapefile/replace")
+    }
+  })
+
+
+  // Choose address or area ==============================================================
+
+  router.post('/v01/manual-add-answer', function (req, res) {
+
+    if (Manual == "postcode") {
+      res.redirect("/v01/address-manual/postcode")
+    } else {
+      res.redirect("/v01/location/search")
     }
   })
 
