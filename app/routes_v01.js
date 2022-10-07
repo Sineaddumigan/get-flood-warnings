@@ -307,12 +307,12 @@ router.post('/location/catigories-check', function (req, res) {
     // Check whether the variable matches a condition
     if (Morelocation == "yes"){
       // Send user to the page where they can add more locations
-      res.redirect('/v01/multiple-upload/location-format')
+      res.redirect('/v01/multiple-upload/flood-warning')
     }
 
      else {
       // Send user to the next page
-      res.redirect('/v01/multiple-upload/flood-warning')
+      res.redirect('/v01/multiple-upload/spreadsheet-postcode/review-unidentified')
     }
 
   })
@@ -326,12 +326,12 @@ router.post('/location/catigories-check', function (req, res) {
     // Send user to the page where they can add more locations
     if (Morelocation1 == "yes"){
       // Send user to next page
-      res.redirect('/v01/multiple-upload/location-format')
+      res.redirect('/v01/multiple-upload/flood-warning')
     }
 
      else {
       // Send user to next page
-      res.redirect('/v01/multiple-upload/flood-warning')
+      res.redirect('/v01/multiple-upload/spreadsheet-postcode/review-unidentified')
     }
 
   })
@@ -425,6 +425,31 @@ router.post('/location/catigories-check', function (req, res) {
     }
   })
 
+
+  // Run this code when a form is submitted to 'juggling-balls-answer'
+  router.post('/manual-add-answer', function (req, res) {
+
+    // Make a variable and give it the value from 'how-many-balls'
+    var AddMethod = req.session.data['manual-add']
+
+    // Check whether the variable matches a condition
+    if (AddMethod == "postcode"){
+      // Send user to next page
+      res.redirect('/v01/multiple-upload/spreadsheet-postcode/postcode-lookup-manual')
+    }
+
+    // Check whether the variable matches a condition
+    if (AddMethod == "grid"){
+      // Send user to next page
+      res.redirect('/v01/location/search')
+    }
+
+     else {
+      // Send user to ineligible page
+      res.redirect('/v01/location/nearby-location')
+    }
+
+  })
 
 
 module.exports = router

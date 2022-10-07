@@ -14,9 +14,24 @@
 {% endblock %}
 
 {% block content %}
+<div class="govuk-notification-banner govuk-notification-banner--success" role="alert" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+<div class="govuk-notification-banner__header">
+<h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+Success
+</h2>
+</div>
+<div class="govuk-notification-banner__content">
+<h3 class="govuk-notification-banner__heading">
+Manually added location for BRID_03
+</h3>
+</div>
+</div>
+
+
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
+
 
       <h1 class="govuk-heading-xl">
         Manually find locations
@@ -42,8 +57,11 @@
   </button>    </div>
     </div>
 
-<div class="govuk-!-padding-bottom-8"></div>
+<div class="govuk-!-padding-bottom-3"></div>
 
+
+
+<div class="govuk-!-padding-bottom-3"></div>
 
 </div class="govuk-grid-column-two-thirds">
 
@@ -79,7 +97,9 @@
 
         <td class="govuk-table__cell">3, Roundhay road, Bridlington</td>
         <td class="govuk-table__cell govuk-table__cell">YO15 3JZ</td>
-        <td class="govuk-table__cell govuk-table__cell">Not found</td>
+        <td class="govuk-table__cell govuk-table__cell">Manually found
+<p>by postcode lookup</p>
+        </td>
 
 
 
@@ -88,7 +108,7 @@
           <dd class="govuk-summary-list__actions hmrc-summary-list__actions">
                   <ul class="govuk-summary-list__actions-list">
                     <li class="govuk-summary-list__actions-list-item">
-                      <a class="govuk-link" href="/v01/multiple-upload/spreadsheet-postcode/how-manual-find"><span aria-hidden="true">Find</span><span class="govuk-visually-hidden">Change Sydney Russell</span></a>
+                      <a class="govuk-link" href="#"><span aria-hidden="true">View or edit</span><span class="govuk-visually-hidden">Find location for BRID_01</span></a>
                     </li>
                   </ul>
                 </dd>
@@ -103,7 +123,9 @@
 
         <td class="govuk-table__cell ">25 A, Belgrave road, Bridlington</td>
         <td class="govuk-table__cell govuk-table__cell">YO15 3JP</td>
-        <td class="govuk-table__cell govuk-table__cell">Not found</td>
+        <td class="govuk-table__cell govuk-table__cell">Manually found
+<p>by selecting from map</p>
+        </td>
 
 
 
@@ -112,8 +134,7 @@
           <dd class="govuk-summary-list__actions hmrc-summary-list__actions">
                   <ul class="govuk-summary-list__actions-list">
                     <li class="govuk-summary-list__actions-list-item">
-                        <a class="govuk-link" href="/v01/multiple-upload/spreadsheet-postcode/how-manual-find"><span aria-hidden="true">Find</span><span class="govuk-visually-hidden">Change Sydney Russell</span></a>
-                    </li>
+                      <a class="govuk-link" href="/v01/multiple-upload/spreadsheet-postcode/how-manual-find"><span aria-hidden="true">View or edit</span><span class="govuk-visually-hidden">Change Sydney Russell</span></a>                    </li>
                   </ul>
                 </dd>
 
@@ -131,7 +152,10 @@
 
                                 <td class="govuk-table__cell govuk-table__cell">52, South Marine Drive, Bridlington</td>
                                 <td class="govuk-table__cell govuk-table__cell">YO15 3JJ</td>
-                                <td class="govuk-table__cell govuk-table__cell">Not found</td>
+                                <td class="govuk-table__cell govuk-table__cell">Manually found
+<p>by linking to nearby address - 11 Belgrave Road, Bridlington, YO15 3JP</p>
+                                </td>
+
 
 
 
@@ -140,7 +164,7 @@
                                   <dd class="govuk-summary-list__actions hmrc-summary-list__actions">
                                           <ul class="govuk-summary-list__actions-list">
                                             <li class="govuk-summary-list__actions-list-item">
-                                              <a class="govuk-link" href="/v01/multiple-upload/spreadsheet-postcode/how-manual-find"><span aria-hidden="true">Find</span><span class="govuk-visually-hidden">Change Sydney Russell</span></a>
+                                              <a class="govuk-link" href="/v01/multiple-upload/spreadsheet-postcode/how-manual-find"><span aria-hidden="true">View or edit</span><span class="govuk-visually-hidden">Change Sydney Russell</span></a>
                                             </li>
                                           </ul>
                                         </dd>
@@ -165,8 +189,7 @@
                                               <dd class="govuk-summary-list__actions hmrc-summary-list__actions">
                                                       <ul class="govuk-summary-list__actions-list">
                                                         <li class="govuk-summary-list__actions-list-item">
-                                                          <a class="govuk-link" href="/v01/multiple-upload/spreadsheet-postcode/how-manual-find"><span aria-hidden="true">Find</span><span class="govuk-visually-hidden">Change Sydney Russell</span></a>
-                                                        </li>
+                                                          <a class="govuk-link" href="/v01/multiple-upload/spreadsheet-postcode/how-manual-find"><span aria-hidden="true">Find</span><span class="govuk-visually-hidden">Change Sydney Russell</span></a>                                                        </li>
                                                       </ul>
                                                     </dd>
 
@@ -229,7 +252,6 @@
 
     </tbody>
   </table>
-
 
 
 

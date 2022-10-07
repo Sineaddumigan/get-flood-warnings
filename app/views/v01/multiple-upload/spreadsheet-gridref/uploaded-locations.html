@@ -28,34 +28,13 @@
 
 <div class="govuk-!-padding-bottom-3"></div>
 
-<form class="form" action="/v01/location-add-answer1" method="post">
+<form class="form" action="/v01/multiple-upload/flood-warning" method="post">
 
-{% from "govuk/components/radios/macro.njk" import govukRadios %}
 
-{{ govukRadios({
-  classes: "govuk-radios--inline",
-  idPrefix: "more-locations1",
-  name: "more-locations1",
-  fieldset: {
-    legend: {
-      text: "Do you need to add more locations?",
-      isPageHeading: true,
-      classes: "govuk-fieldset__legend--m"
-    }
-  },
 
-  items: [
-    {
-      value: "yes",
-      text: "Yes"
-    },
-    {
-      value: "no",
-      text: "No"
-    }
-  ]
-}) }}
+<a href="/v01/multiple-upload/location-format" class="govuk-link">Add more locations</a>
 
+<div class="govuk-!-padding-bottom-6"></div>
 
 
 <button class="govuk-button" data-module="govuk-button">

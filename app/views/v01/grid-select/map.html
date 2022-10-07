@@ -20,13 +20,13 @@
 {% block content %}
 
 
-<form method="post" action="/v01/multiple-upload/manual-find-found">
+<form method="post" action="/v01/multiple-upload/manual-find-found02">
 
 
 <h1 class="govuk-heading-l">Select the area</h1>
 
 <div class="govuk-inset-text">
-  for BRID_01
+  for BRID_02
 </div>
 
 
@@ -48,21 +48,14 @@
 
 <div class="govuk-!-padding-bottom-5"></div>
 
-  <p>
-    Alternatively, if you know a nearby address,
-    <a href="/v01/location/nearby-location"> link this location to a nearby address</a>
-  </p>
+
 
 <div class="govuk-button-group">
   {{ govukButton({
     text: "Continue"
   }) }}
 
-  {{ govukButton({
-    text: "Back to location search",
-    classes: "govuk-button--secondary",
-    href: "/v01/location/search"
-  }) }}
+
 </div>
 
 

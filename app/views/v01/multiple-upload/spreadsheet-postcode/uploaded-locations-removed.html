@@ -24,43 +24,21 @@
 
                 <h1 class="govuk-heading-l">Your uploaded locations</h1>
 
-                  <h3 class="govuk-heading-m">8,000 <p>locations not found</p></h3>
-
-<div class="govuk-!-padding-bottom-3"></div>
-
-<form class="form" action="/v01/location-add-answer1" method="post">
-
-{% from "govuk/components/radios/macro.njk" import govukRadios %}
-
-{{ govukRadios({
-  classes: "govuk-radios--inline",
-  idPrefix: "more-locations1",
-  name: "more-locations1",
-  fieldset: {
-    legend: {
-      text: "Do you need to add more locations?",
-      isPageHeading: true,
-      classes: "govuk-fieldset__legend--m"
-    }
-  },
-
-  items: [
-    {
-      value: "yes",
-      text: "Yes"
-    },
-    {
-      value: "no",
-      text: "No"
-    }
-  ]
-}) }}
+                  <h3 class="govuk-heading-m">1,254 <p>locations not found</p></h3>
 
 
 
-<button class="govuk-button" data-module="govuk-button">
-  Continue
-</button>
+  <form class="form" action="/v01/multiple-upload/flood-warning" method="post">
+
+  <a href="/v01/multiple-upload/location-format">Add more locations</a>
+
+  <div class="govuk-!-padding-bottom-3"></div>
+
+
+
+  <button class="govuk-button" data-module="govuk-button">
+    Continue
+  </button>
 
 
 </div>

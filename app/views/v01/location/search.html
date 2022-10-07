@@ -24,10 +24,10 @@
 
             <form method="post" action="/{{folder}}/grid-select/map">
 
-                <h1 class="govuk-heading-l">Search for an area that covers this location</h1>
+                <h1 class="govuk-heading-l">Select the location area on a map</h1>
 
                 <div class="govuk-inset-text">
-                  for BRID_01
+                  for BRID_02
                 </div>
 
                 {{ govukInput ({
@@ -71,10 +71,7 @@
                     href: "../address/list"
                   }) }}
                   {% endif %}
-                  <p>
-                    Alternatively, if you know a nearby address,
-                    <a href="/v01/location/nearby-location"> link this location to a nearby address</a>
-                </p>
+
             </form>
 
         </div>

@@ -22,21 +22,30 @@
 
         <div class="govuk-grid-column-two-thirds">
 
-                <h1 class="govuk-heading-l">Review the locations not found</h1>
+                <h1 class="govuk-heading-l">Review and edit the locations not found</h1>
 
 
 
-                    <p class="govuk-body">Download the locations not found and check the following:</p>
+                    <p class="govuk-body">Some of your locations have not been found.</p>
+                      <div class="govuk-!-padding-bottom-1"></div>
+                      <p class="govuk-body">If the address is new, the postcode may not have been added to the database yet. You can find the location manually or try again in a few weeks.</p>
+                        <div class="govuk-!-padding-bottom-1"></div>
+
+
+
+                    <h2 class="govuk-heading-m">
+                      Download all the locations not found
+                    </h2>
+
+                    <p class="govuk-body">If the address is not new, check for:</p>
                     <ul class="govuk-list govuk-list--bullet">
-                      <li>typing mistakes</li>
-                      <li>full addresses and postcodes included</li>
-                    </ul>
-
-
-
+                  <li>typing mistakes</li>
+                  <li>details missing, make sure you have included a full address and postcode</li>
+                </ul>
+                <p class="govuk-body">If that still doesn't work, you can manually find each location.</p>
 <a href="#" class="govuk-link govuk-link--no-visited-state">Download locations that were not found (csv, xxKB)</a>
 
-<div class="govuk-!-padding-bottom-5"></div>
+<div class="govuk-!-padding-bottom-6"></div>
 
 <form class="form" action="/v01/unidentified" method="post">
 
@@ -57,15 +66,11 @@
   items: [
     {
       value: "revised",
-      text: "Update the locations not found spreadsheet and re-upload it"
-    },
-    {
-      value: "remove",
-      text: "Continue with the 8000 found locations"
+      text: "Upload the revised spreadsheet with the locations not found"
     },
     {
       value: "manual",
-      text: "Manually find the not found locations"
+      text: "Manually find each location using postcode lookup, link to a nearby address or select on a map"
     }
   ]
 }) }}
